@@ -1,5 +1,28 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="table-wrapper">
+    <table aria-rowcount="{{items.length}}">
+        {{#vertical-collection 
+            items 
+            tagName='tbody' 
+            containerSelector=".table-wrapper"
+            bufferSize=5
+            estimateHeight=50
+            staticHeight=false
+            renderAll=false
+            renderFromLast=false
+            idForFirstItem="row-0"
+        as |item i|}}
+            <tr id="row-{{i}}" aria-rowindex="{{i}}">
+                <td>{{i}}</td>
+                <td>{{i}}</td>
+                <td>{{i}}</td>
+                <td>{{i}}</td>
+                <td>{{i}}</td>
+                <td>{{i}}</td>
+                <td>{{i}}</td>
+                <td>{{i}}</td>
+                <td>{{i}}</td>
+                <td>{{i}}</td>
+            </tr>
+        {{/vertical-collection}}
+    </table>
+</div>

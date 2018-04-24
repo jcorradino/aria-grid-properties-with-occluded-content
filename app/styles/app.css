@@ -1,0 +1,15 @@
+div.table-wrapper {
+    display: block;
+    height: 500px;
+    width: 75%;
+    overflow: scroll;
+    position: relative;
+    background: #fff;
+}
+.table-wrapper table {
+    height: 500px;
+    width: 100%;
+}
+table td {
+    width: 10%;
+}
